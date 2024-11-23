@@ -1,0 +1,259 @@
+/* Основные стили */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #4d4d4d;
+  background-color: #fefefe; /* Нейтральный, светлый фон */
+  transition: opacity 0.6s ease, transform 0.6s ease; /* Плавный переход */
+}
+
+.header {
+  background-color: #ffccd5; /* Нежный розовый */
+  padding: 20px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar .logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #444; /* Тёмный оттенок текста */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar .logo:hover {
+  color: #ff6f61; /* Акцентный цвет для ховера */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #444;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff6f61; /* Акцентный цвет */
+}
+
+/* Анимация переходов страниц */
+.page-transition {
+  opacity: 0;
+  transform: translateY(20px); /* Сдвиг вниз */
+  transition: opacity 0.6s ease, transform 0.6s ease; /* Плавность */
+}
+
+.page-transition.active {
+  opacity: 1;
+  transform: translateY(0); /* Возвращение в исходное положение */
+}
+
+/* Кнопки и ссылки с эффектом подчеркивания */
+.link-transition {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.link-transition::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff7f6e;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.link-transition:hover::after {
+  transform: translateX(0);
+}
+
+/* Главный контент */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.hero-image img {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  border: 4px solid #ffccd5; /* Рамка для фото */
+}
+
+.btn {
+  display: inline-block;
+  background-color: #ff6f61; /* Тёплый акцентный цвет */
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e65b50; /* Немного более тёмный оттенок */
+}
+
+/* Стили для постов */
+.posts {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.posts h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.post-list {
+  display: flex;
+  gap: 20px;
+}
+
+.post-card {
+  background-color: #ffffff; /* Чистый белый фон */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  transform: scale(1.02); /* Лёгкая анимация увеличения */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.post-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.post-card p {
+  font-size: 15px;
+  color: #666;
+}
+
+.post-card span {
+  font-weight: bold;
+  color: #ff6f61; /* Акцентный текст */
+}
+
+/* Стили для расписания */
+.schedule-page {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fffaf2; /* Мягкий кремовый оттенок */
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-page h2 {
+  font-size: 30px;
+  color: #444;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.schedule-page table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.schedule-page th,
+.schedule-page td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.schedule-page th {
+  background-color: #ff6f61;
+  color: white;
+  font-weight: bold;
+}
+
+.schedule-page tr:hover {
+  background-color: #f9f9f9;
+}
+#timetable {
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: #f8f9fa;
+}
+
+#timetable h2 {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Таблица */
+#timetable table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 16px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#timetable th, #timetable td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+/* Заголовки таблицы */
+#timetable thead th {
+  background-color:  #e65b50;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+}
