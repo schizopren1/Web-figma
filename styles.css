@@ -1,15 +1,15 @@
-/* Основные стили */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   color: #4d4d4d;
   background-color: #fefefe;
-  transition: opacity 0.6s ease, transform 0.6s ease; 
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+/* Шапка и навигация */
 .header {
-  background-color: #ffccd5; 
+  background-color: #ffccd5;
   padding: 20px 0;
 }
 
@@ -31,7 +31,7 @@ body {
 }
 
 .navbar .logo:hover {
-  color: #ff6f61; 
+  color: #ff6f61;
 }
 
 .nav-links {
@@ -49,47 +49,11 @@ body {
   transition: color 0.3s ease;
 }
 
-
 .nav-links li a:hover {
   color: #ff6f61;
 }
 
-/* Анимация переходов страниц */
-.page-transition {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease; 
-}
-
-.page-transition.active {
-  opacity: 1;
-  transform: translateY(0); 
-}
-
-/* Кнопки и ссылки с эффектом подчеркивания */
-.link-transition {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-}
-
-.link-transition::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #ff7f6e;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
-}
-
-.link-transition:hover::after {
-  transform: translateX(0);
-}
-
-/* Главный контент */
+/* Герой-секция */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -115,7 +79,7 @@ body {
   border-radius: 50%;
   width: 160px;
   height: 160px;
-  border: 4px solid #ffccd5; 
+  border: 4px solid #ffccd5;
 }
 
 .btn {
@@ -130,108 +94,131 @@ body {
 }
 
 .btn:hover {
-  background-color: #e65b50; 
+  background-color: #e65b50;
 }
 
-/* Стили для постов */
-.posts {
+/* Общие стили для секций */
+.section {
   max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
+  margin: 30px auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-.posts h2 {
-  font-size: 28px;
+/* Стили для секции "Нещодавні оновлення" */
+.recent-updates {
+  background-color: #f0f4f8;
+  border-left: 5px solid #3498db;
+}
+
+.recent-updates .section-title {
+  color: #2c3e50;
+  font-size: 24px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
   margin-bottom: 20px;
-  color: #444;
+}
+
+/* Стили для секции "Практичні роботи" */
+.practical-works {
+  background-color: #f9f3f0;
+  border-left: 5px solid #ff6f61;
+}
+
+.practical-works .section-title {
+  color: #d35400;
+  font-size: 24px;
+  border-bottom: 2px solid #ff6f61;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* Стили для секции "Лабораторні роботи" */
+.laboratory-works {
+  background-color: #f0f8f0;
+  border-left: 5px solid #2ecc71;
+}
+
+.laboratory-works .section-title {
+  color: #27ae60;
+  font-size: 24px;
+  border-bottom: 2px solid #2ecc71;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* Стили для карточек */
+.post-card-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .post-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 .post-card {
-  background-color: #ffffff; 
-  padding: 20px;
+  background-color: white;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  flex: 1;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-align: left;
+  gap: 20px;
 }
 
+.post-card-image {
+   width: 100px; /* Фиксированная ширина изображения */
+   height: auto;
+   object-fit: cover; /* Сохраняет пропорции изображения */
+   flex-shrink: 0; /* Запрещает сжать изображение */
+}
+
+
+.post-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  transition: all 0.3s ease;
+}
+
+.recent-updates .post-card::before { background-color: #3498db; }
+.practical-works .post-card::before { background-color: #ff6f61; }
+.laboratory-works .post-card::before { background-color: #2ecc71; }
+
 .post-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 .post-card h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  margin-top: 10px;
   color: #333;
-}
-
-.post-card p {
-  font-size: 15px;
-  color: #666;
+  font-size: 18px;
 }
 
 .post-card span {
-  font-weight: bold;
-  color: #ff6f61; 
+  display: block;
+  color: #666;
+  font-size: 14px;
+  margin: 10px 0;
 }
 
-/* Стили для расписания */
-.schedule-page {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #fffaf2;
-  border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-}
-
-.schedule-page h2 {
-  font-size: 30px;
-  color: #444;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.schedule-page table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.schedule-page th,
-.schedule-page td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-.schedule-page th {
-  background-color: #ff6f61;
-  color: white;
-  font-weight: bold;
-}
-
-.schedule-page tr:hover {
-  background-color: #f9f9f9;
-}
-#timetable {
-  padding: 20px;
-  text-align: center;
-  margin-bottom: 20px;
-  background-color: #f8f9fa;
-}
-
-#timetable h2 {
-  color: #333;
-  font-size: 28px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.post-card p {
+  color: #666;
+  font-size: 14px;
 }
 
 /* Таблица */
@@ -250,10 +237,76 @@ body {
   border: 1px solid #ddd;
   text-align: center;
 }
+
 /* Заголовки таблицы */
 #timetable thead th {
-  background-color:  #e65b50;
-  color: white;
+  background-color:  #ffccd5;
+  color: rgb(6, 6, 6);
   text-transform: uppercase;
   font-weight: bold;
+}
+
+footer {
+  background-color: #ffccd5; /* Darker background for footer */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  
+}
+
+.social-icons a {
+  color: rgb(8, 7, 7); /* Колір іконок */
+  margin: 0 10px; /* Відступ між іконками */
+  font-size: 1.2em; /* Розмір іконок */
+  transition: color 0.3s ease; /* Плавна зміна кольору при наведенні */
+}
+
+.social-icons a:hover {
+  color: #007bff; /* Колір іконок при наведенні */
+}
+
+.social-icons i {
+margin-right: 5px; /* Отступ между иконкой и текстом */
+}
+
+.space{
+text-align: center;
+}
+
+.practical-page {  /* Застосовуємо flexbox до practical.html */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.practical-page main { /* main всередині practical-page */
+  flex: 1;  /* Розтягуємо main */
+}
+
+.lab-card {
+    display: flex;
+    align-items: flex-start;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    gap: 15px;
+    text-decoration: none; 
+    color: inherit; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
+    flex-direction: row;
+}
+
+.lab-card:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+}
+
+.lab-card img {
+    width: 250px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    flex-shrink: 0;
 }
