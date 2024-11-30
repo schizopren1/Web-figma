@@ -1,51 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Персональне порфоліо</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <title>Портфоліо Віталія</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <header class="header">
-    <nav class="navbar">
-      <a href="#" class="logo">Персональне порфоліо</a>
-      <ul class="nav-links">
-        <li><a href="prac.html">Практичні роботи</a></li>
-        <li><a href="labs.html">Лабораторні роботи</a></li>
-        <li><a href="schedule.html">Розклад</a></li>
-      </ul>
-    </nav>
-    <div class="hero">
-      <div class="hero-text">
-        <h1>Вітаю, я Віталій<br></h1>
-        <p>Мені 18 років, навчаюсь в університеті на 2 курсі факультету Технології цифрового розвитку. Полюбляю вивчати іноземні мови, також вивчати мови програмування</p>
-      </div>
-      <div class="hero-image">
-        <img src="1.jpeg" alt="Profile Photo">
-      </div>
-    </div>
-  </header>
-  <main>
-    <section class="posts">
-      <h2>Нещодавні оновлення</h2>
-      <div class="post-list">
-        <a href="prac.html" class="post-card-link">
-          <div class="post-card">
-            <h3>Віртуальна клавіатура(Практична)</h3>
-            <p><span>05 Листопад 2024</span> | Visual Studio Code</p>
-            <p>Вивчення роботи с grid column та row...</p>
-          </div>
-        </a>
-        <a href="labs.html" class="post-card-link">
-          <div class="post-card">
-            <h3>Оновлення веб-сторінки(Лабораторна)</h3>
-            <p><span>23 Листопад 2024</span> | Visual Studio Code</p>
-            <p>Оновлення дизайну веб-сторінки та оновлення робіт на сторінку...</p>
-          </div>
-        </a>
-      </div>
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="logo">Персональне портфоліо</a>
+            <ul class="nav-links">
+                <li><a href="prac.html">Практичні роботи</a></li>
+                <li><a href="labs.html">Лабораторні роботи</a></li>
+                <li><a href="schedule.html">Розклад</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Вітаю, я Віталій</h1>
+            <p>Мені 18 років, навчаюсь в університеті на 2 курсі факультету Технології цифрового розвитку. Полюбляю вивчати іноземні мови, також вивчати мови програмування</p>
+        </div>
+        <div class="hero-image">
+            <img src="1.jpeg" alt="Віталій">
+        </div>
     </section>
-  </main>
+
+    <div class="section recent-updates">
+        <h2 class="section-title">Нещодавні оновлення...</h2>
+        <div class="post-list">
+            <a href="prac.html" class="lab-card"> 
+                <div class="">
+                    <img src="https://jessup.edu/wp-content/uploads/2023/12/Programming-in-Computer-Science.jpg" alt="Віталій">
+                    <h3>Віртуальна клавіатура(Практична)</h3>
+                    <span>05 Листопад 2024 | Visual Studio Code</span>
+                    <p>Вивчення роботи с grid column та row...</p>
+                </div>
+            </a>
+            <a href="labs.html" class="lab-card">
+                <div class="">
+                    <img src="2.jpg" alt="Віталій">
+                    <h3>Оновлення веб-сторінки(Лабораторна)</h3>
+                    <span>23 Листопад 2024 | Visual Studio Code</span>
+                    <p>Оновлення дизайну веб-сторінки...</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="section practical-works">
+        <h2 class="section-title">Практичні завдання...</h2>
+        <div class="post-list">
+            <a href="prac.html" class="post-card-link">
+                <div class="post-card">
+                    <h3>Віртуальна клавіатура</h3>
+                    <span>Жовтень 2024 | Visual Studio Code</span>
+                    <p>Подальша праця з grid'ами...</p>
+                </div>
+            </a>
+            <a href="prac.html" class="post-card-link">
+                <div class="post-card">
+                    <h3>Вдосконалення меню</h3>
+                    <span>18 Жовтень 2024 | Visual Studio Code</span>
+                    <p>Вдосконалення дизайну реєстраційного меню...</p>
+                </div>
+            </a>
+            <a href="prac.html" class="post-card-link">
+                <div class="post-card">
+                    <h3>Початок шляху</h3>
+                    <span>Вересень 2024 | Visual Studio Code</span>
+                    <p>Ознайомлення з html та css...</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="section laboratory-works">
+        <h2 class="section-title">Лабораторні завдання...</h2>
+        <div class="post-list">
+            <a href="labs.html" class="post-card-link">
+                <div class="post-card">
+                    <h3>Копія меню YouTube</h3>
+                    <span>Жовтень 2024 | Visual Studio Code</span>
+                    <p>Вивчення нових способів написання блоків...</p>
+                </div>
+            </a>
+            <a href="labs.html" class="post-card-link">
+                <div class="post-card">
+                    <h3>Реєстраційне меню</h3>
+                    <span>Вересень 2024 | Visual Studio Code</span>
+                    <p>Створення меню з подальшим його вдосконаленням...</p>
+                </div>
+            </a>
+            <a href="labs.html" class="post-card-link">
+                <div class="post-card">
+                    <h3>Створення додатку планер</h3>
+                    <span>Жовтень 2024 | Visual Studio Code</span>
+                    <p>Реалізація вивченого матеріалу з grid'ами...</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <footer>
+      <div class="social-icons">
+        <a href="https://t.me/your_telegram_username" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram"></i> Telegram</a>
+        <a href="https://www.facebook.com/your_facebook_profile" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="https://twitter.com/your_twitter_username" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i> Twitter</a>
+    </div>
+      <p>© Balya Vitaliy | Усі права захищені.</p>
+  </footer>
 </body>
 </html>
